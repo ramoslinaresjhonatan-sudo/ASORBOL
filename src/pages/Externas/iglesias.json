@@ -1,0 +1,83 @@
+[
+  {
+    "nombre": "Iglesia Luz de Vida",
+    "departamento": "La Paz",
+    "director": "Carlos Mendoza",
+    "telefono": "71234567",
+    "ubicacion": "https://maps.google.com/?q=Zona+Sur+La+Paz+Bolivia",
+    "lat": -16.5282,
+    "lng": -68.1193
+  },
+  {
+    "nombre": "Iglesia Esperanza Viva",
+    "departamento": "La Paz",
+    "director": "María Quispe",
+    "telefono": "72345678",
+    "ubicacion": "https://maps.google.com/?q=El+Alto+Bolivia",
+    "lat": -16.5000,
+    "lng": -68.1800
+  },
+  {
+    "nombre": "Iglesia Nueva Fe",
+    "departamento": "Santa Cruz",
+    "director": "Luis Rojas",
+    "telefono": "73456789",
+    "ubicacion": "https://maps.google.com/?q=Plan+3000+Santa+Cruz+Bolivia",
+    "lat": -17.8252,
+    "lng": -63.1543
+  },
+  {
+    "nombre": "Iglesia Camino de Vida",
+    "departamento": "Santa Cruz",
+    "director": "Ana Suárez",
+    "telefono": "74567890",
+    "ubicacion": "https://maps.google.com/?q=Montero+Santa+Cruz+Bolivia",
+    "lat": -17.3398,
+    "lng": -63.2532
+  },
+  {
+    "nombre": "Iglesia Restauración",
+    "departamento": "Cochabamba",
+    "director": "Pedro Vargas",
+    "telefono": "75678901",
+    "ubicacion": "https://maps.google.com/?q=Quillacollo+Cochabamba+Bolivia",
+    "lat": -17.3914,
+    "lng": -66.2812
+  },
+  {
+    "nombre": "Iglesia Fuente de Vida",
+    "departamento": "Cochabamba",
+    "director": "Lucía Herrera",
+    "telefono": "76789012",
+    "ubicacion": "https://maps.google.com/?q=Sacaba+Cochabamba+Bolivia",
+    "lat": -17.4000,
+    "lng": -66.0500
+  },
+  {
+    "nombre": "Iglesia Redención",
+    "departamento": "Oruro",
+    "director": "Jorge Mamani",
+    "telefono": "77890123",
+    "ubicacion": "https://maps.google.com/?q=Oruro+Centro+Bolivia",
+    "lat": -17.9832,
+    "lng": -67.1061
+  },
+  {
+    "nombre": "Iglesia Gracia Eterna",
+    "departamento": "Tarija",
+    "director": "Sandra López",
+    "telefono": "78901234",
+    "ubicacion": "https://maps.google.com/?q=Yacuiba+Tarija+Bolivia",
+    "lat": -22.0231,
+    "lng": -63.6783
+  },
+  {
+    "nombre": "Iglesia Vida Nueva",
+    "departamento": "Potosí",
+    "director": "Miguel Choque",
+    "telefono": "79012345",
+    "ubicacion": "https://maps.google.com/?q=Uyuni+Potosi+Bolivia",
+    "lat": -20.4636,
+    "lng": -66.8253
+  }
+]

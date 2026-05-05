@@ -1,0 +1,171 @@
+/*
+ * ==========================================
+ * Paleta de Colores - Sistema de Diseño (Pasteles)
+ * ==========================================
+ * Este archivo define las variables de color y utilidades
+ * para mantener la consistencia visual en toda la aplicación.
+ */
+
+:root {
+    /* --- Colores Base (Pasteles) --- */
+    --frosted-blue: hsla(193, 63%, 79%, 1);
+    --frosted-blue-2: hsla(188, 71%, 80%, 1);
+    --frozen-water: hsla(178, 59%, 89%, 1);
+    --honeydew: hsla(152, 59%, 94%, 1);
+    --soft-linen: hsla(113, 15%, 90%, 1);
+    --azure-mist: hsla(174, 28%, 86%, 1);
+    --eggshell: hsla(43, 44%, 89%, 1);
+    --pale-slate: hsla(212, 17%, 83%, 1);
+
+    /* --- Colores Semánticos (Pasteles) --- */
+    --success: hsla(150, 60%, 85%, 1);
+    --warning: hsla(40, 80%, 85%, 1);
+    --error: hsla(0, 70%, 85%, 1);
+    --info: hsla(200, 70%, 85%, 1);
+
+    /* --- Semántica y Superficies --- */
+    --surface-primary: var(--honeydew);
+    --surface-secondary: var(--frozen-water);
+    --text-primary: #2d3436;
+    --text-secondary: #636e72;
+    --accent: var(--frosted-blue);
+
+    /* --- Degradados (Exclusivamente con la paleta) --- */
+    --gradient-linear-primary: linear-gradient(135deg, var(--frosted-blue), var(--frozen-water));
+    --gradient-linear-soft: linear-gradient(45deg, var(--soft-linen), var(--azure-mist));
+    --gradient-sky-pastel: linear-gradient(to bottom, var(--frosted-blue), var(--frosted-blue-2));
+    --gradient-nature-pastel: linear-gradient(to right, var(--honeydew), var(--soft-linen));
+    --gradient-warm-pastel: linear-gradient(45deg, var(--eggshell), var(--frosted-blue-2));
+    
+    /* Degradado completo de la paleta */
+    --gradient-full: linear-gradient(
+        90deg, 
+        var(--frosted-blue), 
+        var(--frosted-blue-2), 
+        var(--frozen-water), 
+        var(--honeydew), 
+        var(--soft-linen), 
+        var(--azure-mist), 
+        var(--eggshell), 
+        var(--pale-slate)
+
+           --eggshell: #F5F1E8;
+    --soft-linen: #EAE4D8;
+
+    --mint-bg: #DFF3F0;
+    --aqua-bg: #CFEDEA;
+
+    --frosted-blue: #4FB6B2;
+    --deep-aqua: #2F8F8B;
+
+    --frozen-water: #E3F4F3;
+
+    --text-primary: #2E2E2E;
+    --text-secondary: #8A8A8A;
+
+    --gold-soft: #E6B566;
+    --gold-strong: #D89B3C;
+
+    --pure-white: #FFFFFF;
+    );
+
+    /* --- Sombras (Shadows) --- */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 
+ * Fondos Mesh Premium (Derivados solo de la paleta pastel)
+ */
+.bg-mesh-aurora {
+    background-color: #ffffff;
+    background-image: 
+        radial-gradient(at 0% 0%, hsla(193, 63%, 79%, 0.4) 0px, transparent 50%),
+        radial-gradient(at 50% 0%, hsla(188, 71%, 80%, 0.4) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, hsla(152, 59%, 94%, 0.4) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, hsla(43, 44%, 89%, 0.4) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, var(--frozen-water) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, var(--honeydew) 0px, transparent 50%);
+    background-attachment: fixed;
+}
+
+.bg-mesh-soft {
+    background: radial-gradient(circle at top left, var(--frosted-blue), transparent),
+                radial-gradient(circle at top right, var(--honeydew), transparent),
+                radial-gradient(circle at bottom left, var(--eggshell), transparent),
+                radial-gradient(circle at bottom right, var(--frozen-water), transparent);
+    background-color: white;
+}
+
+.bg-mesh-cool {
+    background-color: #ffffff;
+    background-image: 
+        radial-gradient(at 0% 0%, var(--frosted-blue) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, var(--frozen-water) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, var(--azure-mist) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, var(--frosted-blue-2) 0px, transparent 50%);
+}
+
+.bg-mesh-warm {
+    background-color: #ffffff;
+    background-image: 
+        radial-gradient(at 0% 0%, var(--eggshell) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, var(--soft-linen) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, var(--honeydew) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, var(--azure-mist) 0px, transparent 50%);
+}
+
+/* 
+ * Degradados Animados 
+ */
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.bg-gradient-animated {
+    background: linear-gradient(-45deg, 
+        var(--frosted-blue), 
+        var(--frozen-water), 
+        var(--honeydew), 
+        var(--azure-mist)
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+}
+
+.bg-gradient-sky-pastel { background: var(--gradient-sky-pastel); }
+.bg-gradient-nature-pastel { background: var(--gradient-nature-pastel); }
+.bg-gradient-warm-pastel { background: var(--gradient-warm-pastel); }
+
+/* Backgrounds Utilidades */
+.bg-frosted-blue   { background-color: var(--frosted-blue); }
+.bg-frozen-water   { background-color: var(--frozen-water); }
+.bg-honeydew       { background-color: var(--honeydew); }
+.bg-soft-linen     { background-color: var(--soft-linen); }
+.bg-azure-mist     { background-color: var(--azure-mist); }
+.bg-eggshell       { background-color: var(--eggshell); }
+.bg-pale-slate     { background-color: var(--pale-slate); }
+.bg-gradient-full  { background: var(--gradient-full); }
+
+/* Text Colors */
+.text-frosted-blue { color: var(--frosted-blue); }
+.text-frozen-water { color: var(--frozen-water); }
+.text-honeydew     { color: var(--honeydew); }
+.text-pale-slate   { color: var(--pale-slate); }
+
+/* Card Styles */
+.color-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.color-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}

@@ -1,0 +1,334 @@
+.ubicacionesPage {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Outfit', sans-serif;
+    background-color: #f8fafc;
+    overflow: hidden;
+}
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    z-index: 100;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #1e293b;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.logoContainer img {
+    height: 35px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #64748b;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 100px;
+    background: #f1f5f9;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    background: #1e293b;
+    color: white;
+}
+
+/* ===== MAIN SPLIT SCREEN ===== */
+.mainContainer {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 450px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 0 30px rgba(0,0,0,0.02);
+    z-index: 10;
+}
+
+.sidebarHeader {
+    padding: 2rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.sidebarHeader h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.sidebarHeader p {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.searchBox:focus-within {
+    border-color: var(--frosted-blue);
+    box-shadow: 0 0 0 3px rgba(162, 195, 219, 0.2);
+}
+
+.searchBox ion-icon {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    margin-right: 0.8rem;
+}
+
+.searchBox input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: #1e293b;
+}
+
+.deptFilters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.filterBtn {
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    color: #64748b;
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filterBtn:hover {
+    border-color: #cbd5e1;
+    color: #1e293b;
+}
+
+.filterActive {
+    background: #1e293b;
+    color: white;
+    border-color: #1e293b;
+}
+
+/* ===== LISTA DE IGLESIAS ===== */
+.iglesiasList {
+    flex: 1;
+    overflow-y: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.iglesiasList::-webkit-scrollbar {
+    width: 6px;
+}
+.iglesiasList::-webkit-scrollbar-track {
+    background: transparent;
+}
+.iglesiasList::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+.iglesiaCard {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    transition: all 0.3s;
+}
+
+.iglesiaCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    border-color: #e2e8f0;
+}
+
+.iglesiaHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.iglesiaIcon {
+    width: 40px;
+    height: 40px;
+    background: var(--frozen-water);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #334155;
+}
+
+.iglesiaDept {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    background: #f8fafc;
+    padding: 0.3rem 0.8rem;
+    border-radius: 100px;
+}
+
+.iglesiaNombre {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #1e293b;
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
+}
+
+.iglesiaDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.iglesiaDetails p {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 500;
+    margin: 0;
+}
+
+.iglesiaDetails ion-icon {
+    font-size: 1rem;
+    color: #94a3b8;
+}
+
+.iglesiaMapBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    border-radius: 12px;
+    background: #f8fafc;
+    color: #1e293b;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.iglesiaMapBtn:hover {
+    background: #1e293b;
+    color: white;
+    border-color: #1e293b;
+}
+
+.noResults {
+    text-align: center;
+    color: #94a3b8;
+    padding: 3rem 0;
+}
+
+.noResults ion-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+/* ===== ÁREA DEL MAPA ===== */
+.mapArea {
+    flex: 1;
+    position: relative;
+    background: #e2e8f0;
+}
+
+@media (max-width: 1024px) {
+    .ubicacionesPage {
+        height: auto;
+        overflow-y: auto;
+    }
+    .mainContainer {
+        flex-direction: column;
+        overflow: visible;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .iglesiasList {
+        height: 500px; /* Altura fija para scroll interno en móvil */
+        overflow-y: auto;
+    }
+    .mapArea {
+        height: 60vh;
+        min-height: 400px;
+        order: -1; /* Mapa primero en móvil para contexto visual */
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0.8rem 5%;
+    }
+    .logoContainer span {
+        display: none; /* Solo logo en móvil muy pequeño si es necesario */
+    }
+    .sidebarHeader {
+        padding: 1.5rem;
+    }
+    .sidebarHeader h2 {
+        font-size: 1.6rem;
+    }
+    .iglesiasList {
+        padding: 1rem;
+    }
+    .iglesiaCard {
+        padding: 1.2rem;
+    }
+}

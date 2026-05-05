@@ -1,0 +1,146 @@
+.mapWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.mapContainer {
+    width: 100%;
+    height: 100%;
+}
+
+/* Marcador personalizado */
+.marker {
+    position: relative;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+}
+
+.markerPin {
+    width: 44px;
+    height: 44px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.marker:hover .markerPin {
+    transform: rotate(-45deg) scale(1.15);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    border-color: #1e293b;
+}
+
+.markerPin span {
+    transform: rotate(45deg);
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+/* Animación de pulso */
+.markerPulse {
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgba(93, 138, 168, 0.3);
+    animation: pulse 2s ease-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateX(-50%) scale(0.8);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) scale(2.5);
+        opacity: 0;
+    }
+}
+
+/* Leyenda inferior del mapa */
+.mapLegend {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    background: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 100px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1e293b;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+/* Override estilos del popup de MapLibre */
+:global(.maplibregl-popup-content) {
+    border-radius: 20px !important;
+    padding: 0 !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12) !important;
+    overflow: hidden;
+    border: 1px solid #f1f5f9;
+}
+
+:global(.maplibregl-popup-tip) {
+    border-top-color: white !important;
+}
+
+/* Botones de navegación del mapa */
+:global(.maplibregl-ctrl-group) {
+    border-radius: 15px !important;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+:global(.maplibregl-ctrl button) {
+    width: 36px !important;
+    height: 36px !important;
+}
+
+.locationWarning {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #fff4f4;
+    color: #ef4444;
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(239, 68, 68, 0.15);
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    z-index: 10;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

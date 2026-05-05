@@ -1,0 +1,133 @@
+.floatWrapper {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.mainBtn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #1b3a8a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(27, 58, 138, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.1rem;
+    /* Transición más elástica y suave para el botón principal */
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    z-index: 10;
+}
+
+.mainBtn:hover {
+    transform: scale(1.1) rotate(15deg);
+    background: #1e40af;
+}
+
+.iconWrapper {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.open .iconWrapper {
+    transform: rotate(135deg); /* Rotación más sutil y moderna para la X */
+}
+
+.menuItems {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+    pointer-events: none;
+    opacity: 0;
+    /* Empieza un poco más abajo y más pequeño */
+    transform: translateY(30px) scale(0.8);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.open .menuItems {
+    pointer-events: all;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.floatItem {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: white;
+    color: var(--color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.8rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    /* Transición súper suave para el hover y el despliegue */
+    transition: 
+        transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        background-color 0.4s ease,
+        color 0.4s ease,
+        box-shadow 0.4s ease;
+    position: relative;
+    transform: scale(0);
+}
+
+.open .floatItem {
+    transform: scale(1);
+}
+
+/* Efecto de "rebote" al aparecer cada item */
+.floatItem:hover {
+    transform: scale(1.15) !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    color: white !important;
+}
+
+.floatItem:not(.instaGradient):hover {
+    background: var(--color);
+}
+
+.instaGradient:hover {
+    background: var(--bg-color) !important;
+}
+
+.instaGradient {
+    color: #E4405F !important;
+}
+
+.label {
+    position: absolute;
+    right: 75px;
+    background: #1b3a8a;
+    color: white;
+    padding: 7px 18px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(15px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.floatItem:hover .label {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

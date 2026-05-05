@@ -1,0 +1,33 @@
+/*
+ * ==========================================
+ * Paleta de Colores - Sistema de Diseño
+ * ==========================================
+ */
+
+:root {
+    /* --- Colores Base --- */
+    --eggshell: #F5F1E8;
+    --soft-linen: #EAE4D8;
+    --mint-bg: #DFF3F0;
+    --aqua-bg: #CFEDEA;
+    --frosted-blue: #4FB6B2;
+    --deep-aqua: #2F8F8B;
+    --frozen-water: #E3F4F3;
+    --honeydew: hsla(152, 59%, 94%, 1);
+    --azure-mist: hsla(174, 28%, 86%, 1);
+    --pale-slate: hsla(212, 17%, 83%, 1);
+
+    /* --- Dorados --- */
+    --gold-soft: #E6B566;
+    --gold-strong: #D89B3C;
+
+    /* --- Semánticos --- */
+    --text-primary: #2E2E2E;
+    --text-secondary: #8A8A8A;
+    --pure-white: #FFFFFF;
+
+    /* --- Sombras --- */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
