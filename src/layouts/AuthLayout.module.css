@@ -1,0 +1,48 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-main, #0F172A);
+  position: relative;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.blob1 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(27, 79, 138, 0.25) 0%, transparent 70%);
+  border-radius: 50%;
+  top: -100px;
+  left: -100px;
+  animation: float 8s ease-in-out infinite;
+}
+
+.blob2 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(241, 190, 72, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  bottom: -80px;
+  right: -80px;
+  animation: float 10s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(20px, 20px); }
+}
+
+.box {
+  position: relative;
+  z-index: 1;
+  width: min(440px, 95vw);
+}

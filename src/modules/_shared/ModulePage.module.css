@@ -1,0 +1,83 @@
+.page { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.title { font-size: 1.5rem; font-weight: 700; color: var(--color-text); margin: 0; }
+
+.subtitle { font-size: 0.875rem; color: var(--color-text-muted); margin: 0.2rem 0 0; }
+
+.badgeActive {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  background: rgba(34,197,94,0.15);
+  color: #4ade80;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badgeInactive {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  background: rgba(239,68,68,0.15);
+  color: #f87171;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badgeWarning {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  background: rgba(245,158,11,0.15);
+  color: #fbbf24;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Form Styles */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--bg-card);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: var(--bg-modal);
+  box-shadow: 0 0 0 4px rgba(27, 79, 138, 0.1);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+

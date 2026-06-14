@@ -1,0 +1,98 @@
+.heroContainer {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--color-complementario-4, #0A245E);
+  color: white;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/imagenes/login-bg.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Azul tipo vidrio oscuro */
+  background: rgba(10, 36, 94, 0.75); 
+  backdrop-filter: blur(12px) brightness(0.7);
+  -webkit-backdrop-filter: blur(12px) brightness(0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 2;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.heroContent h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  background: linear-gradient(to bottom, #ffffff, var(--color-complementario-1, #EFD19F));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroContent p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-complementario-1, #EFD19F);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+  .heroContent p {
+    font-size: 1.1rem;
+  }
+  .heroContainer {
+    height: 50vh;
+  }
+}

@@ -1,0 +1,224 @@
+/* ── Formulario ─────────────────────────────────────────────────────────── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding: 0.25rem 0.25rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+}
+
+/* ── Columnas ───────────────────────────────────────────────────────────── */
+.columnLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.columnRight {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+/* ── Portada ────────────────────────────────────────────────────────────── */
+.photoSection {
+  width: 100%;
+}
+
+.uploadPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  height: 300px;
+  border: 2px dashed var(--border-color);
+  border-radius: 14px;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  background: var(--bg-hover);
+}
+
+.uploadPlaceholder:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--bg-active);
+}
+
+.uploadTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.uploadHint {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.previewContainer {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.removePhoto {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  padding: 7px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  transition: background 0.15s, transform 0.15s;
+}
+
+.removePhoto:hover {
+  background: #dc2626;
+  transform: scale(1.08);
+}
+
+/* ── Campo genérico ─────────────────────────────────────────────────────── */
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ── Textarea ───────────────────────────────────────────────────────────── */
+.textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 0.92rem;
+  resize: vertical;
+  min-height: 80px;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.textarea::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.7;
+}
+
+/* ── Footer botones ─────────────────────────────────────────────────────── */
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* ── Modal de eliminación ───────────────────────────────────────────────── */
+.deleteContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 0.5rem 0 0.25rem;
+}
+
+.warningIcon {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: rgba(239, 68, 68, 0.1);
+  border: 2px solid rgba(239, 68, 68, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ef4444;
+  flex-shrink: 0;
+}
+
+.deleteText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.deleteTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.deleteBook {
+  font-size: 0.92rem;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.deleteSubtitle {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  max-width: 280px;
+}
+
+.deleteFooter {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: 0.75rem;
+}
+
+.deleteFooter > * {
+  flex: 1;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 680px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .previewContainer,
+  .uploadPlaceholder {
+    height: 220px;
+  }
+}

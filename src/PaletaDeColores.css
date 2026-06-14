@@ -1,0 +1,183 @@
+/* ============================================
+   PALETA PRINCIPAL Y COMPLEMENTARIA (MARCA GENERAL)
+   Uso: Toda la comunicación visual de la organización.
+   El azul principal (#0F3999) debe usarse siempre.
+   ============================================ */
+
+:root {
+  /* Principal */
+  --color-principal: #1B4F8A;   /* Azul institucional principal. Usar en fondos, botones, títulos destacados. */
+  --color-principal-rgb: 27, 79, 138;
+  --color-principal-cmyk: "90, 68, 16, 2";
+  --color-principal-pantone: "7685 C";
+
+  /* Complementarios grupo 1 */
+  --color-complementario-1: #EFD19F; /* Tono dorado suave. Para acentos, bordes o fondos secundarios. */
+  --color-complementario-2: #7E7E82; /* Gris neutro. Textos secundarios, líneas divisorias. */
+  --color-complementario-3: #F2F1EF; /* Blanco roto. Fondos de secciones, tarjetas. */
+
+  /* Complementarios grupo 2 */
+  --color-complementario-4: #0A245E; /* Azul oscuro profundo. Usar en pies de página, encabezados alternativos. */
+  --color-complementario-5: #5E80F2; /* Azul vibrante. Llamadas a la acción, enlaces. */
+  --color-complementario-6: #F1BE48; /* Naranja cálido. Destacar ofertas, eventos especiales. */
+  --color-complementario-7: #FF8D6D; /* Coral. Alertas, mensajes de urgencia. */
+
+  /* Variables de UI */
+  --frozen-water: #ACD8DB;  /* Celeste hielo. Bordes y acentos suaves. */
+  --frosted-blue: #72A4CD;  /* Azul escarcha. Líneas y puntos del mapa. */
+}
+
+/* ============================================
+   PALETAS POR DEPARTAMENTO
+   Uso: Identificar visualmente cada área dentro de la iglesia.
+   Cada departamento tiene su propia combinación.
+   ============================================ */
+
+/* ESCUELA SABÁTICA */
+.departamento-escuela-sabatica {
+  --dep-color-1: #0A245E;   /* Base oscura para fondos o bordes */
+  --dep-color-2: #F4A580;   /* Acento cálido para títulos */
+  --dep-color-3: #F7F6F4;   /* Rosa llamativo para detalles */
+  --dep-color-4: #C1C7C7;   /* Gris claro para textos secundarios */
+  --dep-color-5: #597EA1;   /* Azul grisáceo para fondos complementarios */
+}
+
+/* MISIONERO */
+.departamento-misionero {
+  --dep-color-1: #0A245E;
+  --dep-color-2: #F3D183;
+  --dep-color-3: #E9E4D8;   /* Amarillo intenso – resaltar llamados misionales */
+  --dep-color-4: #E3A337;
+  --dep-color-5: #838280;
+}
+
+/* ASISTENCIA SOCIAL */
+.departamento-asistencia-social {
+  --dep-color-1: #0A245E;
+  --dep-color-2: #72A4CD;
+  --dep-color-3: #E9D7DB;   /* Magenta – campañas sociales urgentes */
+  --dep-color-4: #B5B585;
+  --dep-color-5: #ACD8DB;
+}
+
+/* MEDICO MISIONERO (incluye código atípico #82CBA8A) */
+.departamento-medico-misionero {
+  --dep-color-1: #0A245E;
+  --dep-color-2: #ACD8DB;
+  --dep-color-3: #E9E4DB;
+  --dep-color-4: #82CBAA;  /* Atención: 9 caracteres (posible error original) */
+  --dep-color-5: #43887D;
+}
+
+/* PUBLICACIONES */
+.departamento-publicaciones {
+  --dep-color-1: #0A1135;
+  --dep-color-2: #0A245E;
+  --dep-color-3: #E9E4D8;
+  --dep-color-4: #E3A337;
+  --dep-color-5: #92440E;
+}
+
+/* ADOLESCENTES (códigos cortos #53765 y #537490) */
+.departamento-adolescentes {
+  --dep-color-1: #2E3D55;
+  --dep-color-2: #71BEE9;
+  --dep-color-3: #FFA761;
+  --dep-color-4: #F37653;    /* 5 caracteres – usar como está */
+  --dep-color-5: #373490;   /* 5 caracteres */
+}
+
+/* COLPORTAJE */
+.departamento-colportaje {
+  --dep-color-1: #0A245E;
+  --dep-color-2: #F18D60;
+  --dep-color-3: #F7F6F4;
+  --dep-color-4: #029642;
+  --dep-color-5: #D8B9A4;
+}
+
+/* TESORERÍA (código #F76E4 de 5 caracteres) */
+.departamento-tesoreria {
+  --dep-color-1: #0A245E;
+  --dep-color-2: #B7812E;
+  --dep-color-3: #E1BB79;
+  --dep-color-4: #7D7A50;
+  --dep-color-5: #F7F6F4;    /* 5 caracteres */
+}
+
+/* EDUCACIÓN */
+.departamento-educacion {
+  --dep-color-1: #0A245E;
+  --dep-color-2: #FD6F5F;
+  --dep-color-3: #FCE599;
+  --dep-color-4: #735E55;
+  --dep-color-5: #F6F7F2;
+}
+
+/* COMUNICACIÓN (código #BCA64 de 5 caracteres) */
+.departamento-comunicacion {
+  --dep-color-1: #0A245E;
+  --dep-color-2: #F8CA64;    /* 5 caracteres */
+  --dep-color-3: #592D8C;
+  --dep-color-4: #838280;
+  --dep-color-5: #F7F6F4;
+}
+
+/* MÚSICA (solo 4 colores) */
+.departamento-musica {
+  --dep-color-1: #0A245E;
+  --dep-color-2: #E7E3D0;
+  --dep-color-3: #282828;
+  --dep-color-4: #F7F6F4;    /* 5 caracteres */
+}
+
+/* FAMILIA */
+.departamento-familia {
+  --dep-color-1: #0A245E;
+  --dep-color-2: #FA7;
+  --dep-color-3: #C5B794;
+  --dep-color-4: #3C303E;
+  --dep-color-5: #F4EEE2;
+}
+
+/* MUJER */
+.departamento-mujer {
+  --dep-color-1: #0A245E;
+  --dep-color-2: #F18172;
+  --dep-color-3: #39544D;
+  --dep-color-4: #9BA384;
+  --dep-color-5: #F6ECDD;
+}
+
+/* JÓVENES */
+.departamento-jovenes {
+  --dep-color-1: #095A98;
+  --dep-color-2: #20A59A;
+  --dep-color-3: #E1BB79;
+  --dep-color-4: #391A7C;
+  --dep-color-5: #F7F6F4;
+}
+
+/* NIÑOS – más de 5 colores (lista completa con repeticiones) */
+.departamento-ninos {
+  --dep-color-1: #093A98;
+  --dep-color-2: #652CBD;
+  --dep-color-3: #3AC0AF;
+  --dep-color-4: #F66665;     /* 5 caracteres */
+  --dep-color-5: #68CDE9;
+  --dep-color-6: #F183A3;
+  --dep-color-7: #F8CA64;
+  --dep-color-8: #EE5991;
+  --dep-color-9: #81C0BD;   /* repetido */
+  --dep-color-10:#48B4E4;   /* repetido */
+  --dep-color-11:#8AC440;
+  --dep-color-12:#EF8330;
+}
+
+/* COMISIÓN MINISTERIAL / ESTATUTOS / DOCTRINAL / FINANCIERA (comparten misma paleta) */
+.departamento-comisiones {
+  --dep-color-1: #0A245E;
+  --dep-color-2: #D8AB72;
+  --dep-color-3: #9D703E;   /* 7 caracteres (posible error) */
+  --dep-color-4: #F7F6F4;
+}

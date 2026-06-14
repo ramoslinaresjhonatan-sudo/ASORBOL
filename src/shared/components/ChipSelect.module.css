@@ -1,0 +1,88 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.required {
+  color: #ef4444;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.badge {
+  margin-left: auto;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding: 0.6rem;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background: var(--bg-hover);
+  min-height: 50px;
+  align-content: flex-start;
+  transition: border-color 0.2s;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.32rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  border: 1.5px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--color-text);
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+  user-select: none;
+}
+
+.chip:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--bg-active);
+}
+
+.chipOn {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+.chipOn:hover {
+  opacity: 0.88;
+  color: #fff !important;
+}
+
+.empty {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  padding: 0.2rem 0.3rem;
+}

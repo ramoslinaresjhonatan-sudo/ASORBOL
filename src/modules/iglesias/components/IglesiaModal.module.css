@@ -1,0 +1,258 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.photoSection {
+  margin-bottom: 0.5rem;
+}
+
+.photoUpload {
+  width: 100%;
+  height: 120px;
+  border: 2px dashed var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.2s;
+  background: var(--bg-hover);
+}
+
+.photoUpload:hover {
+  border-color: var(--color-primary);
+}
+
+.photoLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.photoPreviewContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.photoPreview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.deletePhoto {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255, 0, 0, 0.8);
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.deletePhoto:hover {
+  transform: scale(1.1);
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.flex1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.select {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.mapHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.aiInputGroup {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.aiInputGroup > div {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.aiButton {
+  background: var(--bg-active);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  height: 48px;
+  padding: 0 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s;
+  margin-bottom: 4px; /* Alinear con el input */
+}
+
+.aiButton:hover:not(:disabled) {
+  background: var(--color-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+.aiButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.coordRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.helperText {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-top: -0.5rem;
+}
+
+.mapPreview {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  background: var(--bg-hover);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.deleteContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.warningIcon {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.deleteSubtitle {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.deleteFooter {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.deleteFooter button {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

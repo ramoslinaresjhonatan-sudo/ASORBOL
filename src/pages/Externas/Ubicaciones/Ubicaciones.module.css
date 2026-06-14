@@ -12,28 +12,36 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 3%;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    z-index: 100;
+    padding: 1rem 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
 .logoContainer {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 800;
-    color: #1e293b;
-    text-decoration: none;
+    color: var(--color-principal, #1B4F8A);
     letter-spacing: -0.5px;
+    text-decoration: none;
 }
 
 .logoContainer img {
-    height: 35px;
+    height: 50px;
+}
+
+.nav {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
 }
 
 .nav a {
@@ -41,15 +49,33 @@
     color: #64748b;
     font-weight: 600;
     font-size: 0.95rem;
-    padding: 0.6rem 1.2rem;
-    border-radius: 100px;
-    background: #f1f5f9;
+    letter-spacing: 0.5px;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
     transition: all 0.3s ease;
 }
 
 .nav a:hover {
-    background: #1e293b;
-    color: white;
+    color: var(--color-principal, #1B4F8A);
+    background: transparent;
+    transform: translateY(-2px);
+}
+
+.btnDonar {
+    background: var(--color-principal, #1B4F8A) !important;
+    color: white !important;
+    padding: 0.6rem 1.8rem !important;
+    border-radius: 100px !important;
+    font-weight: 800 !important;
+    box-shadow: 0 4px 15px rgba(27, 79, 138, 0.3);
+    transition: all 0.3s ease !important;
+}
+
+.btnDonar:hover {
+    background: #153c6b !important;
+    transform: translateY(-2px) scale(1.05) !important;
+    box-shadow: 0 8px 25px rgba(27, 79, 138, 0.4) !important;
 }
 
 /* ===== MAIN SPLIT SCREEN ===== */
@@ -57,6 +83,7 @@
     display: flex;
     flex: 1;
     overflow: hidden;
+    margin-top: 80px; /* Offset for fixed header */
 }
 
 /* ===== SIDEBAR ===== */

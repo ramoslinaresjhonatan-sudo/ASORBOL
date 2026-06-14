@@ -4,7 +4,7 @@ import iglesiaData from '../iglesias.json';
 import MapaIglesias from './MapaIglesias';
 import Css from './Ubicaciones.module.css';
 
-const Logo = '/imagenes/asorbolNegro.png';
+const Logo = '/Recursos de documentacion/imagenesPNG/logo-letra-asulOscuro-asulOscuro-blanco-horizontal.png';
 
 function Ubicaciones() {
     const [selectedDept, setSelectedDept] = useState(null);
@@ -23,14 +23,19 @@ function Ubicaciones() {
 
     return (
         <div className={Css.ubicacionesPage}>
-            {/* Header simple para la vista de ubicaciones */}
+            {/* ===== HEADER INSTITUCIONAL ===== */}
             <header className={Css.header}>
-                <Link to="/" className={Css.logoContainer}>
+                <div className={Css.logoContainer}>
                     <img src={Logo} alt="Logo" />
                     <span>ASORBOL</span>
-                </Link>
+                </div>
                 <nav className={Css.nav}>
-                    <Link to="/">Volver al Inicio</Link>
+                    <Link to="/">Inicio</Link>
+                    <Link to="/#organizacion">Organización</Link>
+                    <Link to="/ubicaciones">Sedes</Link>
+                    <Link to="/calendario">Calendario</Link>
+                    <Link to="/#instituciones">Instituciones</Link>
+                    <Link to="/donaciones" className={Css.btnDonar}>Donar</Link>
                 </nav>
             </header>
 

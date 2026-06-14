@@ -1,0 +1,243 @@
+/* ===== Google Fonts (Inter) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* ===== SORBOL Design Tokens — Paleta Institucional ===== */
+:root {
+  /* Colores institucionales principales */
+  --color-primary: #1B4F8A;       /* Azul institucional */
+  --color-primary-hover: #0A245E; /* Azul oscuro profundo */
+  --color-accent: #F1BE48;        /* Dorado cálido */
+
+  /* ---- DARK MODE (default) ---- */
+  --bg-main: #0F172A;             /* Slate 900 — Profundo nocturno azulado */
+  --bg-sidebar: #0A1228;          /* Azul noche sidebar */
+  --bg-navbar: rgba(15, 23, 42, 0.92);
+  --bg-card: rgba(255,255,255,0.04);
+  --bg-modal: #1E293B;
+  --bg-hover: rgba(255,255,255,0.06);
+  --bg-active: rgba(27, 79, 138, 0.2);
+
+  --color-text: #F1F5F9;
+  --color-text-muted: #94A3B8;
+  --border-color: rgba(255,255,255,0.08);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.25), 0 1px 2px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.3), 0 2px 4px -2px rgba(0,0,0,0.2);
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ---- LIGHT MODE ---- */
+:root.light {
+  --bg-main: #F8FAFC;             /* Gris muy claro azulado (estilo premium) */
+  --bg-sidebar: #ffffff;
+  --bg-navbar: rgba(255,255,255,0.92);
+  --bg-card: #ffffff;
+  --bg-modal: #ffffff;
+
+  --color-text: #0A245E;          /* Azul profundo como texto principal */
+  --color-text-muted: #64748B;
+  --border-color: #E2E8F0;
+  --bg-hover: rgba(27, 79, 138, 0.05);
+  --bg-active: rgba(27, 79, 138, 0.1);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.06);
+}
+
+/* ===== Reset ===== */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+p { margin: 0; }
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; }
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(27, 79, 138, 0.15); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(27, 79, 138, 0.3); }
+
+/* ===== TABLAS INSTITUCIONALES (Diseño Premium) ===== */
+.table-container {
+  background: var(--bg-card);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead {
+  background: rgba(27, 79, 138, 0.04);
+  border-bottom: 1px solid var(--border-color);
+}
+
+thead th {
+  padding: 1.2rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.2s ease;
+}
+
+tbody tr:last-child {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: var(--bg-hover);
+}
+
+td {
+  padding: 1.2rem 1rem;
+  vertical-align: middle;
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+/* Imágenes en tablas */
+.table-img {
+  width: 60px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Avatares circulares para tablas de usuarios */
+.table-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--border-color);
+  background: var(--bg-hover);
+}
+
+.table-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.table-user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.table-user-name {
+  font-weight: 600;
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.table-user-sub {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* Etiquetas y Estados (Pills) */
+.pill {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pill-primary { background: rgba(27, 79, 138, 0.1); color: var(--color-primary); }
+.pill-accent { background: rgba(241, 190, 72, 0.2); color: #856404; }
+.pill-success { background: rgba(34, 197, 94, 0.1); color: #15803d; }
+.pill-danger { background: rgba(239, 68, 68, 0.1); color: #dc2626; }
+
+/* Botones de acción en tabla */
+.table-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-action {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.btn-action:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.95);
+}
+
+.btn-edit:hover { background: var(--bg-active); color: var(--color-primary); }
+.btn-delete:hover { background: #fee2e2; color: #ef4444; }
+
+/* Ajustes Modo Noche para tablas */
+:root:not(.light) thead {
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+:root:not(.light) thead th {
+  color: #94A3B8; /* Azul grisáceo claro para mejor lectura */
+}
+
+:root:not(.light) .table-container {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+:root:not(.light) .btn-action {
+  background: rgba(255, 255, 255, 0.08);
+  color: #F1F5F9;
+}
+
+:root:not(.light) .pill-accent {
+  background: rgba(241, 190, 72, 0.15);
+  color: #F1BE48; /* Amarillo más brillante para contraste */
+}
+
+:root:not(.light) .pill-primary {
+  background: rgba(148, 163, 184, 0.1);
+  color: #CBD5E1;
+}
+
+/* Títulos y textos destacados en tablas para Modo Noche */
+:root:not(.light) table strong,
+:root:not(.light) table [style*="color: var(--color-primary)"] {
+  color: #60A5FA !important; /* Azul cielo brillante para contraste */
+}
+
+

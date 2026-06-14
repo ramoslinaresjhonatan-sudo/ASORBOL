@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState, useCallback, useMemo } from 'react'
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import Css from './MapaIglesias.module.css';
+import axios from 'axios';
 
 const MapaIglesias = ({ iglesias, selectedDept }) => {
     const mapContainer = useRef(null);
@@ -25,10 +26,9 @@ const MapaIglesias = ({ iglesias, selectedDept }) => {
         if (!userLocation || !map.current) return;
 
         try {
-            const response = await fetch(
+            const { data } = await axios.get(
                 `https://router.project-osrm.org/route/v1/driving/${userLocation[0]},${userLocation[1]};${targetCoords[0]},${targetCoords[1]}?overview=full&geometries=geojson`
             );
-            const data = await response.json();
 
             if (data.routes && data.routes.length > 0) {
                 const route = data.routes[0].geometry;
